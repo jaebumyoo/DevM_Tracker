@@ -1,0 +1,102 @@
+.user-info-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.user-info {
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.9);
+  margin: 5% auto;
+  width: 600px;
+  height: 60%;
+}
+
+.github-icon-wrapper {
+  position: relative;
+  height: 80px;
+}
+
+.github-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 100%;
+}
+
+.github-icon:hover {
+  opacity: 0.6;
+}
+
+.user-location-dm {
+  margin: 0 0 0 30px;
+}
+
+.user-name-email {
+  background-color: rgb(42,171,226);
+  padding: 5px 0 10px 0;
+}
+
+.user-name {
+  margin: 5px 0 0 40px;
+  font-size: 45px;
+  color: white;
+  text-shadow: 2px 2px #1b86bd;
+}
+
+.user-email {
+  margin: 5px 0 0 40px;
+  font-size: 15px;
+  color: black;
+}
+
+.user-course-info {
+  display: block;
+  height: 100%;
+  padding-top: 0px;
+  padding-left: 40%;
+}
+
+.user-overall-progress {
+  font-size: 20px;
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+.user-overall-progress-computed {
+  font-size: 100px;
+  margin: 0;
+}
+
+.user-overall-progress-computation {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.user-todays-work-button {
+  width: 80%;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 0;
+  transition: all 300ms ease;
+  transform: scale(1);
+  padding: 0;
+  background: rgba(27,134,189,1);
+  height: 40px;
+  margin: 0 auto 0 auto;
+  line-height: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+
+  box-shadow: 2px 2px black;
+}
+
+.user-todays-work-button:hover {
+  background: rgba(27,134,189,0.6);
+}

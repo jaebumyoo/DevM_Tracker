@@ -1,0 +1,136 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.5);
+}
+
+.things-todo-today {
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.9);
+  margin: auto;
+  margin-top: 50px;
+
+  height: 80%;
+  width: 30%;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+@media ( max-width: 1350px ) {
+  .things-todo-today {
+    width: 405px;
+  }
+}
+
+@media ( max-width: 950px ) {
+  .things-todo-today {
+    width: 405px;
+  }
+}
+
+.today-title-wrapper {
+  min-width: 350px;
+  background-color: #2aabe2;
+  padding: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.today-title {
+  text-shadow: 2px 2px #1b86bd;
+  margin: 0;
+  color: white;
+  font-size: 40px;
+}
+
+.today-wrapper {
+  position: relative;
+  height: 80%;
+}
+
+.today-scroll-wrapper {
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+  min-width: 200px;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.today {
+  text-align: center;
+}
+
+.todays-work-subject {
+  margin: 20px 10px 10px 10px;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.todays-work {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todays-work-individual {
+  margin: 0;
+}
+
+.todays-work-list {
+  overflow: hidden;
+  width: 70%;
+  min-width: 150px;
+  color: #fff;
+  border-radius: 0;
+  transition: all 300ms ease;
+  transform: scale(1);
+  padding: 0;
+  background: rgba(27, 134, 189, 1);
+  height: 40px;
+  margin: 0 auto 5px auto;
+  line-height: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  text-overflow: ellipsis;
+
+  box-shadow: 2px 2px black;
+}
+
+.todays-work-list:hover {
+  background: rgba(27, 134, 189, 0.6);
+}
+
+.completeCheckBox {
+  zoom: 1.5;
+}
+
+.modal-complete-image-wrapper {
+  pointer-events: none;
+  width: 90%;
+  max-width: 750px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.modal-complete-image {
+  width: 95%;
+  opacity: 0.3;
+}

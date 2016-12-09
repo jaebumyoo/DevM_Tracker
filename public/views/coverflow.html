@@ -1,0 +1,78 @@
+<!--/////////////////////////  Coverflow ///////////////////////////-->
+
+<div class="ui-view-wrapper">
+
+  <div class="coverflow-user-name-wrapper">
+    <p class="coverflow-user-name" ng-click="coverflow.current=0; infoModal()">My Account</p>
+    <p class="coverflow-log-out" ng-click="logout()">Log Out</p>
+  </div>
+
+  <cardflow model="coverflow" mode="swipeSnap">
+    <div class="cardflow-card" ng-repeat="day in days" ng-click="coverflow.current=todayModal(day)">
+      <div class="month-date-day-info">
+        <span class="cardflow-month-info">{{months[day.$date.getMonth()]}}</span>
+        <span class="cardflow-date-info">{{day.$date.getDate()}}</span>
+        <span class="cardflow-day-info">{{weekdays[day.$date.getDay()]}}</span>
+      </div>
+      <div class="complete-image-wrapper">
+        <img src="img/completed_stamp.png" alt="complete" class="complete-image" ng-show="completedDayChecker(day)">
+      </div>
+    </div>
+  </cardflow>
+
+<!--///////////////////////////  Info  //////////////////////////////-->
+
+  <div class="user-info-wrapper">
+    <section class="user-info">
+      <div class="github-icon-wrapper">
+        <a class="github-icon-link" href="https://github.com/"><img class="github-icon" src="img/github.png" alt="github"/></a>
+      </div>
+
+      <section class="user-credential-info">
+        <p class="user-location-dm">{{user.location}}, dm#{{user.cohort}}</p>
+        <div class="user-name-email">
+          <h1 class="user-name">{{user.name}}</h1>
+          <p class="user-email">{{user.email}}</p>
+        </div>
+      </section>
+
+      <section class="user-course-info">
+        <h1 class="user-overall-progress">Overall Progress: </h1>
+        <div class="user-overall-progress-calculation">
+          <span class="user-overall-progress-computed">{{Math.floor(user.completedDays.length / days.length * 100)}}%</span>
+          <span class="user-overall-progress-computation">({{user.completedDays.length}} days / {{days.length}} days)</span>
+        </div>
+        <button class="btn btn-default user-todays-work-button" ng-click="coverflow.current=todaysWork()">Today's Work</button>
+      </section>
+    </section>
+  </div>
+
+<!--//////////////////////////  Today  /////////////////////////////-->
+
+  <div class="modal">
+    <section class="things-todo-today">
+      <div class="today-title-wrapper">
+        <h1 class="today-title">{{today.$title}}</h1>
+      </div>
+
+      <div class="today-wrapper">
+        <div class="today-scroll-wrapper">
+          <div class="today" ng-repeat="(subject, works) in today">
+            <h3 class="todays-work-subject">{{subject}}</h3>
+            <ul class="todays-work">
+              <li ng-repeat="work in works">
+                <a target="_blank" href="{{work.url}}"><button class="btn btn-default todays-work-list">{{work.title}}</button></a>
+                <input class="completeCheckBox" type="checkbox" ng-model="work.complete" ng-click="completeChecker()">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-complete-image-wrapper">
+          <img class="modal-complete-image" src="img/completed_stamp.png" alt="complete" ng-show="completed">
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>

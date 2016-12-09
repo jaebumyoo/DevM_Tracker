@@ -1,0 +1,94 @@
+.ui-view-wrapper {
+  position: relative;
+  height: calc( 100vh - 125px );
+  padding-top: 70px;
+}
+
+.coverflow-user-name-wrapper {
+  position: absolute;
+  top: -135px;
+  height: 80px;
+  right: 0;
+  border: none;
+  text-align: right;
+  margin-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.coverflow-user-name {
+  margin: 0;
+  padding: 20px 10px 10px 10px;
+
+  display: inline-block;
+
+  color: white;
+  font-size: 20px;
+
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+
+  border-radius: 0 0 10px 10px;
+}
+
+.coverflow-user-name:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.coverflow-log-out {
+  margin: 0;
+  padding: 20px 10px 10px 10px;
+
+  display: inline-block;
+
+  color: white;
+  font-size: 20px;
+
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+
+  border-radius: 0 0 10px 10px;
+}
+
+.coverflow-log-out:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.month-date-day-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardflow-month-info {
+  display: block;
+  height: 25px;
+  margin-top: -40px;
+  color: white;
+  font-size: 50px;
+}
+
+.cardflow-date-info {
+  margin-top: 100px;
+  font-size: 130px;
+}
+
+.cardflow-day-info {
+  font-size: 50px;
+  margin-top: -90px;
+}
+
+.complete-image-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 7%;
+  height: 300px;
+  width: 300px;
+  opacity: 0.3;
+}
+
+.complete-image {
+  width: 100%;
+  height: auto;
+}

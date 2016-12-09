@@ -1,0 +1,36 @@
+<section class="login">
+  <div class="container content-container">
+    <div class="login-header">
+      <img src="../img/icon.png" class="logo-badge" alt="badge">
+    </div>
+
+    <h1>Login</h1>
+    <p id="login-warning">Check your ID and Password.</p>
+    <p><a class="sign-up" href="https://devmountain.com/signup?v=1">Need an account?</a></p>
+
+    <form class="form-horizontal" role="form" method="post">
+      <div class="form-group">
+        <div>
+          <input name="email" type="email" class="form-input form-control" id="inputEmail1" placeholder="Enter email" tabindex="1" value="demo@test.com" ng-model="email" ng-focus="show( 'testId' )" ng-blur="hide( 'testId' )">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>
+          <input name="password" type="password" class="form-input form-control" id="inputPassword1" placeholder="Password" tabindex="2" ng-model="password" ng-focus="show( 'testPassword' )" ng-blur="hide( 'testPassword' )">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-default devmtnbtn" ng-click="login(email, password)">Submit</button>
+      <p class="forgot-password sign-up"><a href="https://devmountain.com/forgot-password">Forgot password?</a></p>
+    </form>
+
+    <hr>
+
+    <a href="https://devmountain.com/api/auth/github"><button class="btn btn-default social github"><i class="fa fa-github-alt"></i> | Login with Github</button></a>
+    <a href="https://devmountain.com/api/auth/linkedin"><button class="btn btn-default social linkedin"><i class="fa fa-linkedin"></i> | Login with LinkedIn</button></a>
+  </div>
+
+  <span class="testId">Test ID: "demo@test.com"</span>
+  <span class="testPassword">Test Password: "000000"</span>
+</section>
