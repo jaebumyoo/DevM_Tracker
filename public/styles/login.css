@@ -1,22 +1,19 @@
 .login {
   width: 400px;
 
-  margin: 90px auto;
+  margin: auto;
 
   text-align: center;
-
-  background-color:rgba(255, 255, 255, 0.7);
-  border: #eee solid 1px;
 }
 
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin: 8vh auto 0 auto;
   text-align: center;
-  top: 50%;
-  padding: 0;
   box-sizing: border-box;
   position: relative;
+  background-color:rgba(255, 255, 255, 0.7);
+  border: #eee solid 1px;
 }
 
 .login-header {
@@ -217,77 +214,6 @@ hr {
   background-color: rgba(27,134,189,0.6)
 }
 
-
-.testId {
-  margin-left: -80px;
-  padding: 8px 8px;
-
-  position: absolute;
-  top: 386px;
-  left: calc( 50vw + 240px );
-
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-
-  visibility: hidden;
-  background-color: rgba( 85, 85, 85, 0.7 );
-  border-radius: 6px;
-  z-index: 1;
-}
-
-.testId::after {
-  margin-left: -5px;
-
-  position: absolute;
-  bottom: 40%;
-  right: 100%;
-
-  content: "";
-
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgba( 85, 85, 85, 0.7 ) transparent transparent;
-}
-
-.testPassword {
-  margin-left: -80px;
-  padding: 8px 8px;
-
-  position: absolute;
-  top: 436px;
-  left: calc( 50vw + 240px );
-
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-
-  visibility: hidden;
-  background-color: rgba( 85, 85, 85, 0.7 );
-  border-radius: 6px;
-  z-index: 1;
-}
-
-.testPassword::after {
-  margin-left: -5px;
-
-  position: absolute;
-  bottom: 40%;
-  right: 100%;
-
-  content: "";
-
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgba( 85, 85, 85, 0.7 ) transparent transparent;
-}
-
-#show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -296,4 +222,20 @@ hr {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity:1 ;}
+}
+
+@media ( max-height: 700px ) {
+  .login {
+    padding-top: 8vh;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+}
+
+@media ( max-height: 510px ) {
+  .login {
+    padding-top: 10px;
+  }
 }

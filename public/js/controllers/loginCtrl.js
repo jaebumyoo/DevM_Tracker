@@ -8,12 +8,4 @@ angular.module('courseWork')
   $scope.login = function(email, password) {
     $scope.error = dataService.login(email, password);
   }
-
-  $scope.show = function( id ) {
-    document.getElementsByClassName( id )[ 0 ].id = 'show';
-  }
-
-  $scope.hide = function( id ) {
-    document.getElementsByClassName( id )[ 0 ].removeAttribute( 'id' );
-  }
 });
