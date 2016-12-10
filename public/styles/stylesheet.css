@@ -9,14 +9,16 @@ html, body {
 
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
+
+  overflow: hidden;
 }
 
 body {
   width: 100vw;
   height: 100vh;
 
-  min-width: 900px;
-  min-height: 700px;
+  min-width: 400px;
+  min-height: 466px;
 
   background-image: url('../img/Dev-Mountain.jpeg');
   background-attachment: fixed;
@@ -57,4 +59,14 @@ body {
 .nav-logo-image {
   height: 100%;
   padding: 15px 15px 15px 15px;
+}
+
+@media ( max-height: 700px ) {
+  .nav-wrapper {
+    display: none;
+  }
+
+  .my-ui-view {
+    height: 100vh;
+  }
 }
